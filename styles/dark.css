@@ -5,11 +5,20 @@
 */
 
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
+  --bg-picture: url(/images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --header-logo-color: #db00ff;
+  --header-text-color: #000028;
+  --text-color: #f1b2ce;
+  --menu-button-color: #ff0070;
+  --title-text-color: var(--header-text-color);
+  --footer-logo-color: #db00ff;
+  --main-bg-color: #000028;
+}
+/* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-}
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */

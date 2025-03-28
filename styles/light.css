@@ -16,6 +16,7 @@
   --title-text-color: #353430;
   --footer-logo-color: #ffc2e6;
   --lines-color: #353430;
+  --content-background-color: #fff1f7;
   .REC {
     display: none;
   }
@@ -38,6 +39,7 @@
     --title-text-color: #353430;
     --footer-logo-color: #ffc2e6;
     --lines-color: #353430;
+    --content-background-color: #fff1f7;
     .REC {
       display: none;
     }
@@ -59,6 +61,7 @@
     --title-text-color: #353430;
     --footer-logo-color: #ffc2e6;
     --lines-color: #353430;
+    --content-background-color: #fff1f7;
     .REC {
       display: none;
     }

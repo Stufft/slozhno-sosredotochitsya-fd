@@ -8,16 +8,19 @@
   --main-bg-color: #fff1f7;
   --accent-color: #ff8dcb;
   --text-color: #353430;
-  --bg-picture: url(/images/cover-image-light.png);
+  --bg-picture: url(../images/cover-image-light.png);
   --header-logo-color: #ffc2e6;
+  --hover-button-color: #32312d66;
   --header-text-color: #000028;
+  --subtitle-text-color: var(--text-color);
   --text-color: #353430;
   --menu-button-color: #353430;
   --title-text-color: #353430;
   --footer-logo-color: #ffc2e6;
   --lines-color: #353430;
   --content-background-color: #fff1f7;
-  .REC {
+
+  .rec {
     display: none;
   }
 
@@ -31,16 +34,19 @@
     --main-bg-color: #fff1f7;
     --accent-color: #ff8dcb;
     --text-color: #353430;
-    --bg-picture: url(/images/cover-image-light.png);
+    --bg-picture: url(../images/cover-image-light.png);
     --header-logo-color: #ffc2e6;
     --header-text-color: #000028;
+    --hover-button-color: #32312d66;
+    --subtitle-text-color: var(--text-color);
     --text-color: #353430;
     --menu-button-color: #353430;
     --title-text-color: #353430;
     --footer-logo-color: #ffc2e6;
     --lines-color: #353430;
     --content-background-color: #fff1f7;
-    .REC {
+
+    .rec {
       display: none;
     }
     /* Вам также нужно будет написать ряд подобных селекторов */
@@ -53,17 +59,16 @@
     --main-bg-color: #fff1f7;
     --accent-color: #ff8dcb;
     --text-color: #353430;
-    --bg-picture: url(/images/cover-image-light.png);
+    --bg-picture: url(../images/cover-image-light.png);
     --header-logo-color: #ffc2e6;
     --header-text-color: #000028;
+    --hover-button-color: #32312d66;
+    --subtitle-text-color: var(--text-color);
     --text-color: #353430;
     --menu-button-color: #353430;
     --title-text-color: #353430;
     --footer-logo-color: #ffc2e6;
     --lines-color: #353430;
     --content-background-color: #fff1f7;
-    .REC {
-      display: none;
-    }
   }
 }

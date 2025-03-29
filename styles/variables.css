@@ -4,18 +4,21 @@
 */
 :root {
   --main-font-family: IBM Plex mono, monospace;
-  --bg-picture: url(/images/cover-image-dark.png);
+  --bg-picture: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --header-logo-color: #db00ff;
   --header-text-color: #000028;
   --content-background-color: #000028;
   --text-color: #f1b2ce;
+  --hover-button-color: #ff007066;
+  --subtitle-text-color: #ff0070;
   --menu-button-color: #ff0070;
   --title-text-color: var(--header-text-color);
   --button-padding: 13px;
   --main-font-size: 18px;
   --line-height: 130%;
-  --header-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --header-footer-font-size-s: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --header-footer-font-size-l: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --regular-font-weight: 400;
   --bold-font-weight: 700;
   --main-bg-color: #000028;

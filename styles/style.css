@@ -1,4 +1,18 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* general styles */
+section {
+  display: grid;
+  gap: 20px;
+  margin-block-end: 50px;
+}
+
+.title__decore {
+  background-color: var(--accent-color);
+}
+
+/* general styles end */
+
+/* body .page */
+
 .page {
   background-image: var(--bg-picture);
   background-position: center;
@@ -6,42 +20,49 @@
   background-size: cover;
 }
 
-section {
-  margin-block-end: 50px;
-}
+/* body .page end */
+
+/* header */
 
 .header {
   position: relative;
-  height: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: 10px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  justify-items: flex-end;
   align-items: center;
-  padding-inline: 10px;
-}
-
-.header__theme-menu {
-  display: grid;
 }
 
 .header__theme-menu-list {
   display: grid;
   justify-items: end;
+  gap: 10px;
   list-style: none;
-  gap: 13px;
 }
 
+/* theme item */
 .header__theme-menu-button {
-  border: none;
+  height: 26px;
   background-color: transparent;
+  border: none;
   font-size: var(--main-font-size);
   font-family: var(--main-font-family);
   color: var(--menu-button-color);
   text-transform: lowercase;
   line-height: 100%;
   text-align: center;
-  height: 26px;
   padding-inline: var(--button-padding);
+  transition: border 0.3s cubic-bezier(0.4, 0, 1, 0.99);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-button-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--menu-button-color);
 }
 
 .header__theme-menu-button_active {
@@ -50,31 +71,25 @@ section {
   padding-inline: var(--button-padding);
 }
 
-.header__theme-menu-button:hover {
-  border: 1px solid var(--menu-button-color);
-}
-
-.header__theme-menu-button:focus-visible {
-  outline: none;
-  border-bottom: 1px solid var(--menu-button-color);
-}
+/*theme item end*/
 
 .header__title {
-  line-height: 95.7px;
+  line-height: 83%;
   font-family: var(--main-font-family);
   color: var(--header-logo-color);
-  font-size: var(--header-font-size);
+  font-size: var(--header-footer-font-size-s);
   text-shadow: 4px 4px 0px var(--header-text-shadow-color);
-  justify-self: flex-start;
 }
 
-.header__title_text {
+.header__text {
   font-family: var(--main-font-family);
   color: var(--title-text-color);
   font-size: var(--main-font-size);
   font-weight: var(--bold-font-weight);
-  line-height: var(--line-height);
+  line-height: 23.4px;
 }
+
+/* lines */
 
 .decorated-zone::before {
   top: 10px;
@@ -90,8 +105,8 @@ section {
 }
 
 .decorated-zone::after {
-  left: 10px;
   bottom: 10px;
+  left: 10px;
   justify-self: start;
   align-self: flex-end;
   position: absolute;
@@ -102,22 +117,20 @@ section {
   border-inline-start: 1px solid var(--lines-color);
 }
 
-.title__decore {
-  background-color: var(--accent-color);
-}
+/* lines end */
 
-.REC {
+/* rec */
+
+.rec {
   position: absolute;
-  display: grid;
-  justify-content: flex-end;
   top: 10px;
   right: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-/* Круг */
 .rec-circle {
-  display: grid;
-  margin-inline: 9px;
+  margin-inline-end: 9px;
   margin-block-start: 8px;
   width: 9px;
   height: 9px;
@@ -126,33 +139,94 @@ section {
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
-/* Надпись REC */
-.REC::before {
+.rec::before {
   content: "REC";
-  position: absolute;
-  top: 2px;
-  right: 30px;
   font-size: var(--main-font-size);
   font-family: var(--main-font-family);
   color: var(--accent-color);
   text-align: center;
 }
 
-.grid {
-  margin-block-end: 40px;
+/* rec end */
+
+/* header end */
+
+/* content */
+.content {
+  background-color: var(--content-background-color);
+  padding-block-start: 40px;
+  padding-inline: var(--main-padding);
+  inline-size: 100%;
+  display: grid;
 }
 
-.text-link {
+.content__subtitle {
+  color: var(--subtitle-text-color);
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+  font-weight: var(--bold-font-weight);
+  line-height: var(--line-height);
+}
+
+.content__blocks {
+  gap: 20px;
+
+  display: grid;
+}
+
+.content__block {
+  display: grid;
+  gap: 10px;
+}
+
+.content__block-title {
+  font-family: var(--main-font-family);
+  color: var(--title-text-color);
+  inline-size: 100%;
+  font-size: var(--main-font-size);
+  font-weight: var(--bold-font-weight);
+  line-height: var(--line-height);
+}
+
+.content__block-subtitle {
+  margin-block-start: 10px;
+  font-family: var(--main-font-family);
+  color: var(--title-text-color);
+  inline-size: 100%;
+  font-size: var(--main-font-size);
+  font-weight: 400;
+  line-height: var(--line-height);
+}
+
+.content__block-text {
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+  color: var(--text-color);
+  line-height: var(--line-height);
+}
+
+.content_block-text-link {
+  text-shadow: 1px 1px 0px var(--accent-color);
   text-decoration: none;
-  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
+  transition: border-bottom 0.3s cubic-bezier(0.4, 0, 1, 0.99);
 }
 
-.text-link:hover {
-  border-bottom: 1px solid var(--text-color, #f1b2ce);
+.content_block-text-link:hover {
+  border-bottom: 1px solid var(--text-color);
 }
 
-.text-link:focus-visible {
-  outline: 1px solid var(--text-color, #f1b2ce);
+.content_block-text-link:focus-visible {
+  border: 1px solid var(--text-color);
+  outline: none;
+}
+
+/* content end */
+
+/* gallery */
+
+.gallery {
+  margin-block-end: 40px;
+  gap: 0;
 }
 
 .gallery-container {
@@ -162,107 +236,57 @@ section {
   margin-block-start: 10px;
 }
 
-.content__section-title {
-  font-family: var(--main-font-family);
-  color: var(--title-text-color);
-  inline-size: 100%;
-  font-size: var(--main-font-size);
-  font-weight: var(--bold-font-weight);
-  line-height: var(--line-height);
-}
-
-.advices .content__section-title:not(:nth-child(1)) {
-  font-weight: 400;
-}
-
-.content__section-text {
-  margin-block-start: 10px;
-  font-family: var(--main-font-family);
-  font-size: var(--main-font-size);
-  color: var(--text-color);
-  line-height: var(--line-height);
-}
-
-.content__section-text:not(:last-child),
-.text__block:not(:last-child) {
-  margin-block-end: 20px;
-}
-
-.subtitle {
-  color: var(--accent-color);
-  font-family: var(--main-font-family);
-  font-size: var(--main-font-size);
-  font-weight: var(--bold-font-weight);
-  line-height: var(--line-height);
-  margin-block-end: 20px;
-  margin-block-start: 0px;
-}
-
-.text__blocks {
-  h4 {
-    margin-block-start: 20px;
-  }
-}
-
 .image {
   inline-size: 100%;
 }
 
-.content {
-  background-color: var(--content-background-color);
-  padding-block-start: 40px;
-  padding-inline: var(--main-padding);
-  inline-size: 100%;
-  display: grid;
-}
+/* gallery end */
 
-.content__section-link {
-  text-shadow: 1px 1px 0px var(--accent-color);
-  text-decoration: none;
-}
-
-.content__section-link:hover {
-  border-bottom: 1px solid #f1b2ce;
-}
-
-.content__section-link:focus-visible {
-  border: 1px solid #f1b2ce;
-}
+/* footer */
 
 .footer {
   position: relative;
   display: grid;
   align-items: center;
   justify-content: center;
-  line-height: 82%;
+  line-height: 83%;
   font-family: var(--main-font-family);
   font-weight: var(--bold-font-weight);
   color: var(--footer-logo-color);
-  font-size: var(--footer-font-size);
   text-shadow: 2px 2px 0px var(--accent-color);
-  height: 100vh;
-  padding-bottom: 20px;
+  block-size: 100vh;
+  min-block-size: 668px;
+  font-size: var(--header-footer-font-size-s);
 }
 
+/* footer end */
+
 @media (width >= 768px) {
+  /* general styles */
+
   section {
     margin-block-end: 80px;
   }
 
+  /* general styles end */
+
+  /* header */
+
   .header {
-    justify-content: flex-end;
-    padding-inline: 20px;
+    padding: 20px;
   }
 
   .header__title {
     margin-left: -20px;
-    line-height: 83%;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: var(--header-footer-font-size-l);
   }
 
-  .header__title_text {
+  .header__text {
     inline-size: 50%;
+    justify-self: flex-end;
   }
+
+  /* lines */
 
   .decorated-zone::before {
     top: 20px;
@@ -274,26 +298,25 @@ section {
     bottom: 20px;
   }
 
-  /* Круг */
-  .rec-circle {
-    margin-inline: 18px;
-    margin-block-start: 18px;
+  /* lines end */
+
+  /* rec */
+
+  .rec {
+    top: 20px;
+    right: 20px;
   }
 
-  /* Надпись REC */
-  .REC::before {
-    top: 10px;
-    right: 40px;
-  }
+  /* rec end */
 
-  .text__blocks {
-    display: grid;
-  }
+  /* header end */
 
   .content {
     padding-inline: 20px;
     padding-block-start: 60px;
   }
+
+  /* why */
 
   .why {
     column-gap: 20px;
@@ -301,14 +324,29 @@ section {
     grid-template-columns: 1fr 2fr;
   }
 
-  .causes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  .why .content__block {
+    grid-column: 2;
   }
 
-  .causes .text__blocks {
+  /* why end */
+
+  /* causes */
+
+  .causes {
+    grid-template-columns: repeat(4, 1fr);
+
+    .content__blocks {
+      grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      grid-column: 1 / -1;
+    }
+  }
+
+  .causes .content__block {
     grid-column: 1 / -1;
   }
+
+  /* causes end */
 
   .advices {
     display: grid;
@@ -316,6 +354,8 @@ section {
     column-gap: 20px;
     margin-block-end: 80px;
   }
+
+  /* gallery */
 
   .gallery-container {
     grid-template-areas:
@@ -356,9 +396,12 @@ section {
     grid-area: street;
   }
 
+  /* gallery end */
+
+  /* footer */
+
   .footer {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    line-height: 99px;
+    font-size: var(--header-footer-font-size-l);
   }
 
   .footer.decorated-zone::after {
@@ -368,6 +411,8 @@ section {
   .footer.decorated-zone::before {
     top: 10px;
   }
+
+  /* footer end */
 }
 
 @media (width >= 1024px) {
@@ -382,14 +427,14 @@ section {
     grid-column: 1 / span 3;
   }
 
-  .header__title_text {
+  .header__text {
     grid-row: 5;
     grid-column: 1 / span 3;
     align-self: end;
+    margin-block-end: -7px;
   }
 
   .header__theme-menu {
-    padding-block-start: 20px;
     grid-column: 2 / 3;
     align-self: flex-start;
     justify-self: center;
@@ -406,10 +451,15 @@ section {
   .causes {
     grid-template-columns: repeat(3, 1fr);
 
-    .text__blocks {
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(0, 1fr);
-      column-gap: 20px;
+    .content__blocks {
+      grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      grid-column: 1 / -1;
+    }
+
+    .content__block {
+      grid-template-rows: min-content 1fr;
+      grid-column: auto;
     }
   }
   .advices {
